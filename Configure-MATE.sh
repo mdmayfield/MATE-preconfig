@@ -12,7 +12,7 @@ error()
 echo "Copying panel layout configurations. Will need root password."
 sudo cp MM-Custom-tweak.layout /usr/share/layouts/ || error "Could not copy layout file."
 sudo cp MM-Custom-tweak.panel /usr/share/layouts/ || error "Could not copy panel file."
-cat dconf load / < custom.dconf || error "Loading dconf file failed."
+dconf load / < custom.dconf || error "Loading dconf file failed."
 
 
 
